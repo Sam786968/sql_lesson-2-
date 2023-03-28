@@ -1,3 +1,6 @@
+https://github.com/alexjj/SQL-Learning/blob/master/Basic%20SQL
+
+
 CREATE TABLE employee (
   emp id INT PRIMARY KEY,
   first_name VARCHAR(40),
@@ -19,14 +22,14 @@ CREATE TABLE branch (
 
 -- Slide 27 shows important vocabulary. 
 -- Slide 32 shows altering a table.
-ALTER TABLE employee 
-ADD FOREIGN KEY(branch_id)
+ALTER TABLE employee
+ADD FOREIGN KEY (branch_id)
 REFERENCES branch(branch_id)
 ON DELETE SET NULL;
 
 ALTER TABLE employee 
 ADD FOREIGN KEY(super_id)
-REFERENCES branch(branch_id)
+REFERENCES employee(emp_id)
 ON DELETE SET NULL;
 
 CREATE TABLE client (
